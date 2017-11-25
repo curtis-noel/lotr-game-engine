@@ -1,0 +1,22 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+	<changeSet id="02" author="clnoel">
+		<comment>Inserting characters</comment>
+
+		<insert tableName="characters">
+			<column name="id" valueNumeric="1" />
+			<column name="character_class" value="hero" />
+			<column name="title" value="Aragorn" />
+			<column name="threat" valueNumeric="12" />
+			<column name="sphere" value="Leadership" />
+			<column name="willpower" valueNumeric="2" />
+			<column name="attack" valueNumeric="3" />
+			<column name="defense" valueNumeric="2" />
+			<column name="hitpoints" valueNumeric="5" />
+		</insert>
+		
+	</changeSet>
+</databaseChangeLog>

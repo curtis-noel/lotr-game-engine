@@ -1,1 +1,0 @@
-INSERT INTO heroes (title, threat, sphere, willpower, attack, defense, hit_points) VALUES ('Aragorn',12,'Leadership',2,3,2,5);

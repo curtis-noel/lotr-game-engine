@@ -6,16 +6,18 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 
 @Entity
-@Table(name = "HEROES")
-public class Hero {
+@Table(name = "CHARACTERS")
+public class Character {
 
    @Id
    @GeneratedValue(strategy = GenerationType.IDENTITY)
    private Long id;
 
+   @Column(name = "CHARACTER_CLASS")
+   private String characterClass;
+   
    @Column(name = "TITLE")
    private String title;
 
@@ -37,22 +39,16 @@ public class Hero {
    @Column(name = "HIT_POINTS")
    private int hitPoints;
    
-   @Transient
-   private int wounds;
+   public Character() {}
    
-   @Transient
-   private int resources;
-   
-   public Hero() {}
-   
-   public Hero(String title, int threat, String sphere, int willpower, int attack, int defense, int hitPoints) {
+   public Character(String title, int threat, String sphere, int willpower, int attack, int defense, int hitPoints) {
       this.title = title;
       this.threat=threat;
       this.sphere = sphere;
       this.willpower = willpower;
-      this.attack=attack;
-      this.defense=defense;
-      this.hitPoints=hitPoints;
+      this.attack = attack;
+      this.defense = defense;
+      this.hitPoints = hitPoints;
    }
 
    // Getter and Setter methods
