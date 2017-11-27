@@ -1,4 +1,4 @@
-package lotr.entity;
+package lotr.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,14 +8,14 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "CHARACTERS")
-public class Character {
+@Table(name = "GAMECHARACTERS")
+public class GameCharacter {
 
    @Id
    @GeneratedValue(strategy = GenerationType.IDENTITY)
    private Long id;
 
-   @Column(name = "CHARACTER_CLASS")
+   @Column(name = "CHARACTERCLASS")
    private String characterClass;
    
    @Column(name = "TITLE")
@@ -36,12 +36,12 @@ public class Character {
    @Column(name = "DEFENSE")
    private int defense;
    
-   @Column(name = "HIT_POINTS")
+   @Column(name = "HITPOINTS")
    private int hitPoints;
    
-   public Character() {}
+   public GameCharacter() {}
    
-   public Character(String title, int threat, String sphere, int willpower, int attack, int defense, int hitPoints) {
+   public GameCharacter(String title, int threat, String sphere, int willpower, int attack, int defense, int hitPoints) {
       this.title = title;
       this.threat=threat;
       this.sphere = sphere;
@@ -51,5 +51,11 @@ public class Character {
       this.hitPoints = hitPoints;
    }
 
-   // Getter and Setter methods
+   public long getId() {
+	   return this.id;
+   }
+   
+   public String getCharacterClass() {
+	   return this.characterClass;
+   }
 }

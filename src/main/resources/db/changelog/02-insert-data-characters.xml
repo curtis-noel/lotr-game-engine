@@ -6,9 +6,9 @@
 	<changeSet id="02" author="clnoel">
 		<comment>Inserting characters</comment>
 
-		<insert tableName="characters">
+		<insert tableName="gamecharacters">
 			<column name="id" valueNumeric="1" />
-			<column name="character_class" value="hero" />
+			<column name="characterclass" value="hero" />
 			<column name="title" value="Aragorn" />
 			<column name="threat" valueNumeric="12" />
 			<column name="sphere" value="Leadership" />
